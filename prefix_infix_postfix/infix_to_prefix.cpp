@@ -15,7 +15,19 @@ bool isOperand(char c) {
     return false;
 }
 
-string infixToPostfix(string s) {
+string reverse(string s) {
+    string result;
+    for(int i=s.length()-1;i>=0;i--){
+        if(s[i] == ')') result += '(';
+        else if(s[i] == '(') result +=')';
+        else result +=s[i];
+    }
+    return result;
+}
+
+string infixToPrefix(string s) {
+
+    s = reverse(s); // just single line added in prefix rest is same as postfix
 
     stack<char> myStack;
     string result;
@@ -55,13 +67,13 @@ string infixToPostfix(string s) {
 
 int main(){
 
-    // string infix = "(a-b/c)*(a/k-l)";
-    string infix = "a+b*c";
-    string ans = infixToPostfix(infix);
+    string infix = "(a-b/c)*(a/k-l)"; 
+    // string infix = "a+b*c";
+    string ans = infixToPrefix(infix);
 
     cout<<"infix string : "<<infix<<endl;
-    cout<<"postfix string : "<<ans<<endl;
-    
+    cout<<"Prefix string : "<<ans<<endl;
+    // cout<<reverse(infix);
     return 0;
 }
 
