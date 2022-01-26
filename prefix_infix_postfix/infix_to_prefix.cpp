@@ -62,18 +62,18 @@ string infixToPrefix(string s) {
         result += myStack.top();
         myStack.pop();
     }
-    return result;
+    return reverse(result);
 }
 
 int main(){
 
-    string infix = "(a-b/c)*(a/k-l)"; 
-    // string infix = "a+b*c";
+    // string infix = "(a-b/c)*(a/k-l)"; 
+    string infix = "a+b*c";
     string ans = infixToPrefix(infix);
 
     cout<<"infix string : "<<infix<<endl;
     cout<<"Prefix string : "<<ans<<endl;
-    // cout<<reverse(infix);
+    
     return 0;
 }
 
