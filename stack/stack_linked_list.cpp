@@ -17,12 +17,13 @@ class Node{
         void push();
         void pop();
         void display();
+        bool isEmpty();
 };
 
 Node* stack = new Node();
 Node* top = NULL;
 
-bool isEmpty(){
+bool Node :: isEmpty(){
     if(top == NULL) return true;
     return false;
 }
