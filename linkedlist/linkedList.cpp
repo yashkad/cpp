@@ -65,25 +65,6 @@ void createList(Node* head){
     }   
 }
 
-
-
-
-void push(Node* head) {
-    int n ;
-    Node* temp = NULL;
-    temp = head;
-    cout<<"Enter value of element to Enter into list "<<endl;
-    cin>>n;
-
-    while(temp!= NULL){
-        cout<<" : "<<temp->data<<endl;
-        temp = temp->next ;
-    }
-    cout<<"temp :"<<temp;
-
-
-}
-
 int main(){
     Node* head = NULL;
     head = new Node();
