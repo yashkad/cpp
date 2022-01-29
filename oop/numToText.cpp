@@ -57,10 +57,6 @@ int main() {
     cin>>s;
     result =  calculate( s, s.length());
     cout<<result<<endl;
-    for(int i=0;i<999;i++) {
-        s = to_string(i);
-        cout<<calculate(s,s.length())<<endl;
-    }
 
     return 0;
 }
