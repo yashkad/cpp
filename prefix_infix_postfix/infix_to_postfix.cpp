@@ -55,7 +55,7 @@ string infixToPostfix(string s) {
 
 int main(){
 
-    // string infix = "(a-b/c)*(a/k-l)";
+    // string infix = "(a-b/c)*(a/k-l)"; 
     string infix = "a+b*c";
     string ans = infixToPostfix(infix);
 
